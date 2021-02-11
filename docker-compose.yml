@@ -46,17 +46,17 @@ services:
             - postgres
         command: >
             /resources/wait-for-it.sh postgres:5432 --timeout=30 --strict -- /run.sh
-    react:
-        container_name: react
-        build:
-            context:  .
-            dockerfile: ./dockerfiles/react/Dockerfile
-        ports:
-            - 3001:3000
-        depends_on: 
-            - nginx
-        volumes:
-            - ./reactapp:/reactapp
+    # react:
+    #     container_name: react
+    #     build:
+    #         context:  .
+    #         dockerfile: ./dockerfiles/react/Dockerfile
+    #     ports:
+    #         - 3001:3000
+    #     depends_on: 
+    #         - nginx
+    #     volumes:
+    #         - ./reactapp:/reactapp
     nginx:
         container_name: nginx20
         restart: always

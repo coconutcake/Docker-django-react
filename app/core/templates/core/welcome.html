@@ -3,67 +3,28 @@
 {% load static %}
 
 
-{% block welcome %}
+{% block page %}
     <title>Django online</title>
+
     <section>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 header-container text-center">
-                <img width=50 src="{% static 'media/img/django-logo.png' %}"/>
-                <h1> Django {{ django_version }} backend online via nginx</h1>
-                <hr>
-                <p>Proceed with following urls to acceess:</p>
-                <hr>
-            </div>
+        <div class="container">
+
+            {% block header %}
+                {% include 'core/components/header.html' %}
+            {% endblock header %}        
+            <hr>
+            {% block services %}
+                {% include 'core/components/services.html' %}
+            {% endblock %}
+            <hr>
+            {% block packages %}
+                {% include 'core/components/packages.html' %}
+            {% endblock %}
+            <hr>
+            {% block footer %}
+                {% include 'core/components/footer.html' %}
+            {% endblock %}
+
         </div>
-        <div class="row">
-            <div class="col-6 text-end">
-            <ul class="no-bullets">
-                <li><i class="fas fa-server"></i> Adminer:</li>
-                <li><i class="fas fa-server"></i> Nginx upstream:</li>
-                <li><i class="fas fa-user-lock"></i> Django CMS:</li>
-                <li><i class="fas fa-plug"></i> RestAPI:</li>
-                <li><i class="fab fa-react"></i> React:</li>
-            </ul>
-            </div>
-            <div class="col-6">
-            <ul class="no-bullets">
-                <li><a href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a></li>
-                <li><a href="https://127.0.0.1:4433/">https://127.0.0.1:4433/</a></li>
-                <li><a href="https://127.0.0.1:4433/admin/">https://127.0.0.1:4433/admin/</a></li>
-                <li><a href="https://127.0.0.1:4433/admin/">https://127.0.0.1:4433/api/</a></li>
-                <li><a href="http://127.0.0.1:3001/">http://127.0.0.1:3001/</a></li>
-            </ul>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-6 text-end">
-             <ul class="no-bullets">
-                <li><i class="fas fa-cubes"></i> Installed packages:</li>
-            </ul>
-            </div>
-            <div class="col-6">
-                {% for package in pip_packages %}
-                    <span>{{ package }}</span><br>
-                {% endfor %}
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-6 text-end">
-            <ul class="no-bullets">
-                <li>Author:</li>
-                <li>Email:</li>
-            </ul>
-            </div>
-            <div class="col-6">
-            <ul class="no-bullets">
-                <li><a href="http://mign.pl">Mateusz Ignatowicz</a></li>
-                <li><a href="mailto:contact@mign.pl">contact@mign.pl</a></li>
-            </ul>
-            </div>
-        </div>
-    </div>
     <section>
-{% endblock welcome %}
+{% endblock page %}

@@ -1,0 +1,13 @@
+
+    <div class="row">
+        <div class="col-6 text-end">
+            <ul class="no-bullets">
+            <li><i class="fas fa-cubes"></i> Installed packages:</li>
+        </ul>
+        </div>
+        <div class="col-6">
+            {% for package in pip_packages %}
+                <span>{{ package }}</span><br>
+            {% endfor %}
+        </div>
+    </div>

@@ -7,5 +7,5 @@ from django.conf import settings
     
     
 urlpatterns = [    
-    re_path("", views.MainView.as_view()),
+    path("main/", views.MainView.as_view(),name="main"),
 ]

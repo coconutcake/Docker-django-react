@@ -9,3 +9,20 @@ li {
 section {
   margin-top: 3rem;
 }
+body {
+  background-color: rgb(5, 68, 51);
+}
+span,li {
+  color: rgb(240, 255, 252);
+}
+h1,p,a {
+  color: rgb(0, 226, 151);
+}
+hr {
+  border-bottom: dotted 1px rgb(255, 255, 255);
+}
+
+
+a:hover {
+  color:rgb(240, 255, 252);
+}

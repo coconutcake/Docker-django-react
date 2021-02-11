@@ -1,0 +1,51 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block welcome %}
+    <title>Django online</title>
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 header-container text-center">
+                <h1> Django backend online</h1>
+                <hr>
+                <p>Proceed with following urls to acceess:</p>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-end">
+            <ul class="no-bullets">
+                <li>Adminer:</li>
+                <li>Nginx upstream:</li>
+                <li>React:</li>
+            </ul>
+            </div>
+            <div class="col-6">
+            <ul class="no-bullets">
+                <li><a href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a></li>
+                <li><a href="https://127.0.0.1:4433/">https://127.0.0.1:4433/</a></li>
+                <li><a href="http://127.0.0.1:3001/">http://127.0.0.1:3001/</a></li>
+            </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6 text-end">
+            <ul class="no-bullets">
+                <li>Author:</li>
+                <li>Email:</li>
+            </ul>
+            </div>
+            <div class="col-6">
+            <ul class="no-bullets">
+                <li><a href="http://mign.pl">Mateusz Ignatowicz</a></li>
+                <li><a href="mailto:contact@mign.pl">contact@mign.pl</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <section>
+{% endblock welcome %}
